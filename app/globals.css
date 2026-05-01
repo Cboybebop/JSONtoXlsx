@@ -1,0 +1,38 @@
+:root {
+  color-scheme: light;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  background: linear-gradient(180deg, #f5f7ff 0%, #ffffff 100%);
+  color: #131a2a;
+}
+.page { max-width: 960px; margin: 0 auto; padding: 3rem 1rem; }
+.hero h1 { font-size: 2.2rem; margin: 0.2rem 0; }
+.subtitle { color: #4b5565; max-width: 70ch; }
+.badge { display: inline-block; background: #e5ecff; color: #2b4eff; padding: 0.3rem 0.6rem; border-radius: 999px; font-weight: 600; }
+.card { background: #fff; border: 1px solid #e7eaf1; border-radius: 16px; padding: 1rem; box-shadow: 0 8px 30px rgba(16, 24, 40, 0.06); }
+.controls { display: grid; grid-template-columns: 1fr 1fr; gap: 0.8rem; margin-bottom: 0.8rem; }
+label { display: flex; flex-direction: column; gap: 0.4rem; font-weight: 600; }
+input, textarea { border: 1px solid #d6dbe7; border-radius: 10px; padding: 0.65rem; font: inherit; }
+textarea { resize: vertical; font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
+.panel { margin-top: 1rem; border: 1px solid #e8ebf3; border-radius: 12px; padding: 0.9rem; background: #fcfdff; }
+.panel h3 { margin: 0 0 0.5rem; }
+.rowControls { display: grid; grid-template-columns: 1fr 1fr; gap: 0.8rem; }
+.chips { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+.chip { background: #eef2ff; color: #2e3a66; border: 1px solid #c8d3ff; border-radius: 999px; padding: 0.35rem 0.7rem; }
+.chip.selected { background: #2b4eff; color: #fff; border-color: #2b4eff; }
+.progressWrap { margin-top: 0.8rem; background: #edf1ff; border-radius: 999px; padding: 0.2rem; position: relative; }
+.progressBar { height: 10px; border-radius: 999px; background: linear-gradient(90deg, #2b4eff, #6e8bff); transition: width 0.2s ease; }
+.progressWrap span { font-size: 0.8rem; color: #445071; display: inline-block; margin-top: 0.2rem; }
+.footer { display: flex; justify-content: space-between; align-items: flex-start; margin-top: 1rem; gap: 1rem; }
+button { background: #2b4eff; color: #fff; border: none; border-radius: 10px; padding: 0.75rem 1rem; font-weight: 700; cursor: pointer; }
+button:disabled { opacity: 0.45; cursor: not-allowed; }
+.muted { color: #5d677a; font-size: 0.9rem; }
+.errorBox ul { margin: 0.4rem 0 0; padding-left: 1rem; color: #a53f13; }
+.error { color: #b42318; font-weight: 700; margin: 0; }
+@media (max-width: 720px) {
+  .controls, .rowControls { grid-template-columns: 1fr; }
+  .footer { flex-direction: column; }
+}
