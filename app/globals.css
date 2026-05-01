@@ -14,12 +14,15 @@ body {
 .badge { display: inline-block; background: #e5ecff; color: #2b4eff; padding: 0.3rem 0.6rem; border-radius: 999px; font-weight: 600; }
 .card { background: #fff; border: 1px solid #e7eaf1; border-radius: 16px; padding: 1rem; box-shadow: 0 8px 30px rgba(16, 24, 40, 0.06); }
 .controls { display: grid; grid-template-columns: 1fr 1fr; gap: 0.8rem; margin-bottom: 0.8rem; }
-label { display: flex; flex-direction: column; gap: 0.4rem; font-weight: 600; }
-input, textarea { border: 1px solid #d6dbe7; border-radius: 10px; padding: 0.65rem; font: inherit; }
+.controls > * { min-width: 0; }
+label { display: flex; flex-direction: column; gap: 0.4rem; font-weight: 600; min-width: 0; }
+input, textarea { width: 100%; max-width: 100%; border: 1px solid #d6dbe7; border-radius: 10px; padding: 0.65rem; font: inherit; }
+input[type="file"] { overflow: hidden; }
 textarea { resize: vertical; font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
 .panel { margin-top: 1rem; border: 1px solid #e8ebf3; border-radius: 12px; padding: 0.9rem; background: #fcfdff; }
 .panel h3 { margin: 0 0 0.5rem; }
 .rowControls { display: grid; grid-template-columns: 1fr 1fr; gap: 0.8rem; }
+.rowControls > * { min-width: 0; }
 .chips { display: flex; flex-wrap: wrap; gap: 0.5rem; }
 .chip { background: #eef2ff; color: #2e3a66; border: 1px solid #c8d3ff; border-radius: 999px; padding: 0.35rem 0.7rem; }
 .chip.selected { background: #2b4eff; color: #fff; border-color: #2b4eff; }
