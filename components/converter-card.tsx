@@ -49,7 +49,7 @@ function buildInsight(rawJson: string, parsed: JsonRecord[]): Insight | null {
 
     return null;
   } catch {
-    const looksAlmostValid = /([{\[]).*(\]|})/s.test(rawJson);
+    const looksAlmostValid = /([{\[])[\s\S]*(\]|})/.test(rawJson);
     return {
       message: "Invalid JSON syntax.",
       suggestions: looksAlmostValid
